@@ -12,6 +12,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -88,4 +89,14 @@ public class SpringInitializerCustumizationApplication {
 		model.put("message", this.message);
 		return "welcome les loulous";
 	}
+	
+	
+/**++++++++++++++++++++++++++++++++++++++++++++++
+ * @return Obj donc ce n est pas une JSP ?
+ * https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-web-applications.html*/
+    @RequestMapping(value="/{user}", method=RequestMethod.DELETE)
+    public User deleteUser(@PathVariable Long user) {
+		return null;
+        
+    }
 }
